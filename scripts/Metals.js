@@ -1,3 +1,13 @@
+// import { getMetals } from "./database.js"
+
+// const metals = getMetals()
+
+// document.addEventListener(
+//     "change",
+//     (event) => {
+//     }
+// )
+
 import { getMetals } from "./database.js"
 
 const metals = getMetals()
@@ -5,6 +15,9 @@ const metals = getMetals()
 document.addEventListener(
     "change",
     (event) => {
+        if (event.target.name === "metal") {
+            window.alert(`User chose metal ${event.target.value}`)
+        }
     }
 )
 
